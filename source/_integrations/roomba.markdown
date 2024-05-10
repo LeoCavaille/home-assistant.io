@@ -72,12 +72,12 @@ If automatic retrieval does not work, you can retrieve the credentials manually.
 For Home Assistant Container, the following command retrieves the BLID (username) and password:
 
 ```shell
-docker exec -it CONTAINER_NAME_OR_ID python -c 'import roombapy.entry_points; roombapy.entry_points.password()' ROOMBA_IP
+docker exec -it CONTAINER_NAME_OR_ID roombapy discover ROOMBA_IP
 ```
 
 <div class='note'>
   
-The command to retrieve the credentials does not need any additional software to be installed because it uses the built-in [roombapy](https://github.com/pschmitt/roombapy) package and [password](https://github.com/pschmitt/roombapy/blob/1.6.1/roomba/entry_points.py#L20) function deployed with Home Assistant.
+The command to retrieve the credentials does not need any additional software to be installed because it uses the built-in [roombapy](https://github.com/pschmitt/roombapy) package and a [get password logic](https://github.com/pschmitt/roombapy/blob/1.8.1/roombapy/getpassword.py) deployed with Home Assistant.
 
 </div>
 
